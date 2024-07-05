@@ -1,0 +1,38 @@
+.footer_paginationTable{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    .left_part_pagination{
+        .total_number{
+            font-weight: 700;
+        }
+    }
+    .right_part_pagination{
+        display: flex;
+       align-items: center;
+        .paginationproduct_select{
+            height: 38px;
+            margin: 0;
+            border-radius: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.295);
+        }
+        .pagination_btnlist{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            .paginationproduct_btn{
+                width:30px;
+                cursor: pointer;
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid rgba(128, 128, 128, 0.253);
+                text-align: center;
+                line-height: 30px;
+                margin-left: 5px;
+             }   
+        }
+
+    }
+}

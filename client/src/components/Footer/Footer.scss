@@ -1,0 +1,34 @@
+.footer-part{
+    padding-top: 12px;
+    border-top: 4px solid orangered;
+    .footer_heading{
+        font-size: small;
+        text-transform: uppercase;
+    }
+    .footer_list{
+        padding-left: 0;
+        list-style: none;
+    }
+    .footer_list_item{
+        color:#737373;
+        padding: 2px 0px;
+        cursor: pointer;
+        .app{
+            margin-left: 10px;
+        }
+    }
+    .footer_list_item:hover{
+        color: orangered;
+    }
+    .footer_dowload{
+        display: flex;
+        .footer_dowload_apps{
+            flex: 1;
+            .app_link{
+                margin-left:5px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,32 @@
+
+.header_navbar{
+    display: flex;
+    justify-content: space-between;
+    .navList{
+        list-style: none;
+        padding-left: 0;
+        .navlist_item{
+            display: inline-block;
+            position: relative;
+            color: var(--white-color) ;
+            margin:0 8px;
+            .link-item{
+                display: inline-block;
+                color: var(--white-color) ;
+                text-decoration: none;
+            }
+            .notify_board {
+                position: absolute;
+                top: 105%;
+                z-index: 1;
+                transform-origin: top right;
+                right: 0;
+                animation: Grow ease-in 0.25s;
+                border: 1px solid #D3D3D3;
+                width: 404px;
+                background-color: var(--white-color);
+            
+            }
+        }
+    }
+}
