@@ -1,0 +1,240 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Tủ quần áo",
+      "description": "Gấp nhanh và lắp ráp 3 phút: Khung bao gồm cài đặt miễn phí. Độ ổn định mạnh mẽ: Mặt trên có thể chịu các vách ngăn 60kg, có thể chịu 20kg",
+      "categoryId": "12",
+      "price": "10000",
+      "discount": "10",
+      "currentPrice": "9000",
+      "sts": [
+        "hot",
+        "new",
+        "sell"
+      ],
+      "delete": false,
+      "quantity": "34",
+      "imgLink": [
+        "",
+        ""
+      ],
+      "revenue": "0",
+      "sell": "50"
+    },
+    {
+      "id": 2,
+      "name": "Tủ giày dép",
+      "description": "Lắp ráp nhanh chóng và dễ dàng. Độ ổn định tốt, chứa được nhiều giày dép.",
+      "categoryId": "13",
+      "price": "12000",
+      "discount": "15",
+      "currentPrice": "10200",
+      "sts": [
+        "hot",
+        "new"
+      ],
+      "delete": false,
+      "quantity": "20",
+      "imgLink": [
+        "",
+        ""
+      ],
+      "revenue": "0",
+      "sell": "30"
+    },
+    {
+      "id": 3,
+      "name": "Tủ lạnh mini",
+      "description": "Tiết kiệm điện năng, dung tích lớn, bảo quản thực phẩm tươi ngon.",
+      "categoryId": "14",
+      "price": "150000",
+      "discount": "20",
+      "currentPrice": "120000",
+      "sts": [
+        "new",
+        "sell"
+      ],
+      "delete": false,
+      "quantity": "15",
+      "imgLink": [
+        "",
+        ""
+      ],
+      "revenue": "0",
+      "sell": "25"
+    },
+    {
+      "id": 4,
+      "name": "Bàn học sinh",
+      "description": "Thiết kế tiện lợi, dễ dàng điều chỉnh chiều cao, bền đẹp.",
+      "categoryId": "15",
+      "price": "80000",
+      "discount": "5",
+      "currentPrice": "76000",
+      "sts": [
+        "hot",
+        "sell"
+      ],
+      "delete": false,
+      "quantity": "40",
+      "imgLink": [
+        "",
+        ""
+      ],
+      "revenue": "0",
+      "sell": "60",
+      "type": {
+        "color": [
+          "nâu",
+          "đen",
+          "trắng"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Kệ sách",
+      "description": "Thiết kế hiện đại, nhiều ngăn, lắp ráp dễ dàng, chứa được nhiều sách.",
+      "categoryId": "16",
+      "price": "50000",
+      "discount": "10",
+      "currentPrice": "45000",
+      "sts": [
+        "hot",
+        "new"
+      ],
+      "delete": false,
+      "quantity": "25",
+      "imgLink": [
+        "",
+        ""
+      ],
+      "revenue": "0",
+      "sell": "40"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nameAccount": "quan le",
+      "roles": "user",
+      "email": "lanhquan130@gmail.com",
+      "password": "leanhquan2122005",
+      "active": false,
+      "block": false,
+      "img": ""
+    },
+    {
+      "id": 2,
+      "nameAccount": "huy nguyen",
+      "roles": "user",
+      "email": "huynguyen123@gmail.com",
+      "password": "huynguyen123",
+      "active": true,
+      "block": false,
+      "img": ""
+    },
+    {
+      "id": 3,
+      "nameAccount": "mai tran",
+      "roles": "user",
+      "email": "maitran456@gmail.com",
+      "password": "maitran456",
+      "active": true,
+      "block": false,
+      "img": ""
+    },
+    {
+      "id": 4,
+      "nameAccount": "anh hoang",
+      "roles": "user",
+      "email": "anhhoang789@gmail.com",
+      "password": "anhhoang789",
+      "active": false,
+      "block": false,
+      "img": ""
+    },
+    {
+      "id": 5,
+      "nameAccount": "minh pham",
+      "roles": "user",
+      "email": "minhpham101@gmail.com",
+      "password": "user",
+      "active": true,
+      "block": false,
+      "img": ""
+    },
+    {
+      "nameAccount": "duy đức",
+      "email": "duydyc@gmail.com",
+      "password": "12345678",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 6
+    },
+    {
+      "nameAccount": "congminh",
+      "email": "phamminh2008@gmail.com",
+      "password": "phaminh123",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 7
+    },
+    {
+      "nameAccount": "duy",
+      "email": "duy@gmail.com",
+      "password": "123456789",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "id": 12,
+      "level": 1,
+      "name": "đồ gia dụng",
+      "sub_categories": [
+        8,
+        6,
+        9
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "level": 1,
+      "productId": 2,
+      "content": "",
+      "love": 13,
+      "response": [
+        12,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 4,
+      "customerId": 1,
+      "level": 3,
+      "productId": 2,
+      "content": "",
+      "love": 13,
+      "response": [
+        12,
+        5,
+        6
+      ]
+    }
+  ],
+  "order": []
+}
