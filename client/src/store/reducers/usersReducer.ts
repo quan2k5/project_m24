@@ -26,6 +26,7 @@ export const addUsers:any=createAsyncThunk(
     'User/addUser',
     async(user:any)=>{
         const response=await axios.post('http://localhost:3000/users/',user);
+        return response.data;
     }
 )
 export const testBlock:any=createAsyncThunk(
@@ -56,13 +57,15 @@ const userReducer :any= createSlice({
                 state.allUsers=action.payload;
             })
             .addCase(testBlock.fulfilled,(state:any,action:PayloadAction<any>)=>{
-                console.log('scdxc',action.payload);
                 state.users=state.users.map(function(e:any){
                     if(action.payload.id===e.id){
                        e.block=action.payload.block;
                     }
                     return e;
                 })
+            })
+            .addCase(addUsers.fulfilled,(state:any,action:PayloadAction<any>)=>{
+                state.allUsers.push(action.payload);
             })
     }
 });

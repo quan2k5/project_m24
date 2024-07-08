@@ -1,0 +1,76 @@
+.login_form{
+    background-color :white;
+    height: 500px;
+    width:400px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .14);
+    background-color: #fff;
+    right: 20px;
+    top:40px;
+    padding: 0 32px;
+    .login-form-heading{
+        color: black;
+    }
+    .login-form-group{
+        margin-top: 16px;
+        .login-form-item{
+            margin-bottom: 20px;
+            select,input{
+                width: 100%;
+                height: 40px;
+                padding: 0 12px;
+                border-radius: 5px;
+                border: 1px solid #e3e9ed;
+            }
+        }
+    }
+    .login-btn-item{
+        .login_btn:hover{
+            background-color: orangered;
+        }
+        .login_btn{
+            width: 100%;
+            cursor: pointer;
+            height: 40px;
+            background-color: rgba(255, 68, 0, 0.795);
+            color: white;
+            outline: 0;
+            border: 0;
+            border-radius: 2px;
+        }
+    }
+    .bottom_login{
+        margin-top: 40px;
+
+        .top_bottom_login{
+            position: relative;
+            height: 45px;
+            .bottom-line{
+                width: 100%;
+                border: 1px solid rgba(128, 128, 128, 0.24);
+            }
+            .or{
+                position: absolute;
+                background-color: white;
+                width: 70px;
+                height: 35px;
+                top:-10px;
+                display: flex;
+                justify-content: center;
+                color: gray;
+                h4{
+                    margin: 0;
+                }
+                left:40%;
+            }
+        }
+        .bottom_bottom_login{
+            text-align: center;
+            .to_register_page{
+                text-decoration: none;
+            }
+        }
+
+    }
+}

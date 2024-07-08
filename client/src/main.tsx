@@ -8,7 +8,7 @@ import {store} from './store/store.ts'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
       <BrowserRouter>
-      <App></App>
+        <App></App>
       </BrowserRouter>
   </Provider>
 

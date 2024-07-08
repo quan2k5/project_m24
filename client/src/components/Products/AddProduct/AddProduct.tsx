@@ -4,10 +4,13 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { CloseOutlined, PlusOutlined } from '@ant-design/icons';
 import Validation from './Validation';
-import { Product,ErrorProduct,} from '../../../interface/Products';
+import { Product,ErrorProduct} from '../../../interface/Products';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { storage } from '../../../config/firebase_config';
 export default function AddProduct() {
     const [obj, setObj] = useState<Product>({name:'',description:'',categoryId:'',price:'',discount:'',delete:false,quantity:'',imgLink:[],sell:'0',revenue:'0',sts:[],});
     const [errors, setErrors] = useState<ErrorProduct>({ name:'',description:'',categoryId:'',price:'',discount:'',quantity:'',imgLink:''});
+    const [selectedFile, setSelectedFile] = useState<File>();
     const handleChange =(event: React.ChangeEvent<HTMLInputElement|HTMLSelectElement>)=>{
         const {name,value}=event.target;
         setObj((prevObj) => ({
@@ -18,9 +21,47 @@ export default function AddProduct() {
     const areAllValuesEmpty = (obj:any) => {
         return Object.values(obj).every(value => value === '');
     };
-    const formValidation = () => {
-        setErrors(Validation(obj));
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+            // const files = event.target.files;
+            // if (files && files.length > 0) {
+            //     const reader = new FileReader();
+            //     reader.onload = () => {
+            //         if (typeof reader.result === 'string') {
+            //             setImageUrl([...imageUrl, reader.result]);
+            //         }
+            //     };
+            //     reader.readAsDataURL(files[0]);
+            //     setSelectedFile([...selectedFile, files[0]]);
+            // }
+        };
+    const handleImageChange=(event:React.ChangeEvent<HTMLInputElement>)=>{
+        let valueImages:any=event.target.files?.[0];
+        setSelectedFile(valueImages);
+    }
+    const handleUpload = async (): Promise<string> => {
+        if (selectedFile) {
+            const storageRef = ref(storage, `images/${selectedFile.name}`);
+            try {
+                const snapshot = await uploadBytes(storageRef, selectedFile);
+                const url = await getDownloadURL(snapshot.ref);
+                setObj((prevObj) => ({
+                    ...prevObj,
+                    imgLink: [...prevObj.imgLink, url]
+                }));
+                return url; // Trả về URL của ảnh đã upload
+            } catch (error) {
+                console.error('Error uploading file:', error);
+                return ''; // Trả về chuỗi rỗng nếu có lỗi
+            }
+        }
+        return ''; 
     };
+    const formValidation = () => {
+        handleUpload().then((response:any)=>{
+            console.log(response);     
+        });
+        setErrors(Validation(obj));
+    }; 
     return (
         <div className='products_adminActions_part'>
             <div className='grid_row'>
@@ -75,7 +116,7 @@ export default function AddProduct() {
                                 </svg>
                             </div>
                             <label htmlFor='fileinput' className='uploadImage_content'>Thêm hình ảnh</label>
-                            <input type="file" id='fileinput' className='upload_input'  />
+                            <input type="file" id='fileinput' className='upload_input' onChange={handleImageChange}  />
                         </div>
                         <div className='image_list'>
                         </div>

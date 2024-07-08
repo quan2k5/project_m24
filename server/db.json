@@ -122,7 +122,7 @@
       "email": "lanhquan130@gmail.com",
       "password": "leanhquan2122005",
       "active": false,
-      "block": false,
+      "block": true,
       "img": ""
     },
     {
@@ -194,18 +194,142 @@
       "block": false,
       "img": "",
       "id": 8
+    },
+    {
+      "nameAccount": "huy nguyễn",
+      "email": "duy1@gmail.com",
+      "password": "123456789",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 9
+    },
+    {
+      "nameAccount": "minh manh",
+      "email": "minhmanh@gmail.com",
+      "password": "123456789",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 10
     }
   ],
   "categories": [
     {
-      "id": 12,
-      "level": 1,
-      "name": "đồ gia dụng",
-      "sub_categories": [
-        8,
-        6,
-        9
-      ]
+      "id": 373219,
+      "name": "quần áo",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 609129,
+      "name": "sd",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 486535,
+      "name": "sãdcfv",
+      "parentId": 373219,
+      "delete": true
+    },
+    {
+      "id": 34232,
+      "name": "yhyhy",
+      "parentId": 486535,
+      "delete": true
+    },
+    {
+      "id": 747939,
+      "name": "rftg",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 907716,
+      "name": "rfhyyh",
+      "parentId": 747939,
+      "delete": true
+    },
+    {
+      "id": 699328,
+      "name": "rfff",
+      "parentId": 907716,
+      "delete": true
+    },
+    {
+      "id": 760563,
+      "name": "tgrtghg",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 930670,
+      "name": "quần áo",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 171056,
+      "name": "ttrang nam",
+      "parentId": 843617,
+      "delete": true
+    },
+    {
+      "id": 598463,
+      "name": "trang nữ",
+      "parentId": 930670,
+      "delete": true
+    },
+    {
+      "id": 843617,
+      "name": "the thao",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 621577,
+      "name": "do da bong",
+      "parentId": 843617,
+      "delete": true
+    },
+    {
+      "id": 895968,
+      "name": "sdsf",
+      "parentId": 621577,
+      "delete": true
+    },
+    {
+      "id": 182682,
+      "name": "sc",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 153196,
+      "name": "scv",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 832316,
+      "name": "sxc ",
+      "parentId": 153196,
+      "delete": true
+    },
+    {
+      "id": 952180,
+      "name": "xs",
+      "parentId": 832316,
+      "delete": true
+    },
+    {
+      "id": 329614,
+      "name": "f",
+      "parentId": -1,
+      "delete": false
     }
   ],
   "comments": [

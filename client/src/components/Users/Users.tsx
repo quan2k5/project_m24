@@ -1,6 +1,6 @@
 import React from 'react'
 import Pagination from '../Pagination/Pagination'
-import { SearchOutlined,PlusCircleOutlined,CloseOutlined } from '@ant-design/icons'
+import { SearchOutlined,PlusCircleOutlined,CloseOutlined,UserOutlined } from '@ant-design/icons'
 import './Users.scss'
 import { UseDispatch,useDispatch,useSelector } from 'react-redux'
 import { getUsers,totalValidateUsers,addUsers,getAllUsers,testBlock } from '../../store/reducers/usersReducer'
@@ -76,17 +76,18 @@ export default function Users() {
         setErrors(currentError);
         if(currentError.nameAccount=='' &&currentError.email=='' && currentError.password=='' && currentError.authPassword==''){
             const { authPassword, ...others }=employee;
-            dispatch(getAllUsers());
             dispatch(addUsers(others));
             setFilter({...filter, nameAccount_like:'',_sort:'',_order:''});
             setSearch('');
             setSelect('mặc định');
             setModal(false);
+            setEmployee({nameAccount:'',email:'',password:'',authPassword:'',active:false,roles:'user',block:false,img:''})
         }
     }
     const closeForm=()=>{
         setErrors({nameAccount:'',email:'',password:'',authPassword:''});
         setModal(false);
+        setEmployee({nameAccount:'',email:'',password:'',authPassword:'',active:false,roles:'user',block:false,img:''})
     }
     const checkBlock=(id:number)=>{
         const item:any= usersList.find((element:any) => {
@@ -106,7 +107,27 @@ export default function Users() {
   return (
     <div className='users_management_part'>
         <div className='grid_row'>
-            <div className='grid-column-2'></div>
+            <div className='grid-column-2'>
+                {/* <div className='admin_menu'>
+                    <ul>
+                        <li>
+                            <span>Tổng quan</span>
+                        </li>
+                        <li>
+                            <UserOutlined />
+                            <span>Quản lý người dùng</span>
+                        </li>
+                        <li>
+                            <UserOutlined />
+                            <span>Quản lý danh mục</span>
+                        </li>
+                        <li>
+                            <UserOutlined />
+                            <span>Quản lý sản phẩm</span>
+                        </li>
+                    </ul>
+                </div> */}
+            </div>
             <div className='grid-column-10'>
                 <div className='header_totalUsers'>
                     <h3 className='title_totalUsers'>Danh sách Users</h3>

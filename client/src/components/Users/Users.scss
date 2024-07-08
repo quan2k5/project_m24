@@ -1,6 +1,6 @@
 .users_management_part{
     background-color:#F5F5F5;
-    min-height: 500px;
+    min-height: 600px;
     padding: 20px;
     position: relative;
     .header_totalUsers{
@@ -187,4 +187,10 @@
             }
         }
     }
+}
+.admin_menu{
+    margin-top: 0;
+    background-color: #edeff2;
+    min-height: 50px;
+    border-right: 1px solid #e5e7eb;
 }
