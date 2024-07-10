@@ -1,5 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { logEvent } from "firebase/analytics";
 const initialProducts: any[] = [];
 export const addProduct:any=createAsyncThunk(
     'products/addProducts',
@@ -41,13 +42,53 @@ export const deleteProduct:any = createAsyncThunk(
         return response.data.length; 
     }
 );
+export const updateProduct:any=createAsyncThunk(
+    'products/updateProduct',
+    async (obj:any)=>{ 
+        const response=await axios.patch(`http://localhost:3000/products/${obj.id}`,obj.item); 
+        console.log(response.data);
+        return response.data;
+    }
+)
 const productReducer :any= createSlice({
     name: 'products',
     initialState: {
         products:initialProducts,
         totalValidateProducts:0,
+        currentProduct:{
+            name: '',
+            description: '',
+            categoryId: '-1',
+            price: '',
+            discount: '',
+            delete: false,
+            quantity: '',
+            imgLink: [],
+            sell: '0',
+            revenue: '0',
+            currentPrice:-1,
+        },
+        errors:{
+            name: '',
+            description: '',
+            categoryId: '',
+            price: '',
+            discount: '',
+            quantity: '',
+            imgLink: ''
+        }
     },
     reducers: {
+        checkErrors:(state:any,action:PayloadAction<any>)=>{
+            state.errors={...action.payload};
+        },
+        handleChangeProduct: (state, action: PayloadAction<any>) => {
+            const { name, value } = action.payload;
+            state.currentProduct = { ...state.currentProduct, [name]: value };
+        },
+        handleInitialProduct:(state:any,action:PayloadAction<any>)=>{
+            state.currentProduct=action.payload;
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -62,5 +103,5 @@ const productReducer :any= createSlice({
             })
     }
 });
-export const {} = productReducer.actions;
+export const {handleChangeProduct,handleInitialProduct,checkErrors} = productReducer.actions;
 export default productReducer.reducer;

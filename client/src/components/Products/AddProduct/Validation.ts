@@ -1,5 +1,5 @@
 import { Product,ErrorProduct } from "../../../interface/Products"
-export default function Validation(values:Product){
+export default function Validation(values:Product,allproducts:any,checkStatus:number,idProduct:any){
     const error:ErrorProduct={
         name:'',
         description:'',
@@ -9,10 +9,25 @@ export default function Validation(values:Product){
         quantity:'',
         imgLink:'',
     }
+    let newProducts=[...allproducts];
+    if(checkStatus!=0){
+        newProducts=allproducts.filter((e:any)=>{
+            return e.id!=idProduct;
+        })
+        
+    }
+    const checkWith=()=>{
+        let find:any=newProducts.find((e:any)=>{
+            return values.name===e.name;
+        })
+        return find?true:false;
+    }
     if(values.name===''){
         error.name='Tên sản phẩm là bắt buộc'
+    }else if(checkWith()){
+        error.name='Tên đang bị trùng'
     }
-    if(values.categoryId===''){
+    if(values.categoryId==='-1'){
         error.categoryId='Danh mục sản phẩm là bắt buộc'
     }
     if(values.quantity===''){
@@ -30,26 +45,11 @@ export default function Validation(values:Product){
     }else if(Number(values.discount)<=10){
         error.discount='Khuyến mãi ko hợp lệ'
     }
+    if(values.description===''){
+         error.description='Mô tả sản phẩm là bắt buộc'
+    }
+    if(values.imgLink.length===0){
+        error.imgLink='Hình ảnh sản phẩm là bắt buộc'
+    }
     return error;
 }
-// {imageUrl.map((e: string, index: number) => (
-//     <div className='image_item' key={index}><img src={e} alt="product" /></div>
-// ))}
-// const [selectedFile, setSelectedFile] = useState<File[]>([]);
-//    const [imageUrl, setImageUrl] = useState<string[]>([]);
-// const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     const files = event.target.files;
-//     if (files && files.length > 0) {
-//         const reader = new FileReader();
-//         reader.onload = () => {
-//             if (typeof reader.result === 'string') {
-//                 setImageUrl([...imageUrl, reader.result]);
-//             }
-//         };
-//         reader.readAsDataURL(files[0]);
-//         setSelectedFile([...selectedFile, files[0]]);
-//     }
-// };
-
-
-

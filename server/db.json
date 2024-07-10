@@ -1,117 +1,78 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Tủ quần áo",
-      "description": "Gấp nhanh và lắp ráp 3 phút: Khung bao gồm cài đặt miễn phí. Độ ổn định mạnh mẽ: Mặt trên có thể chịu các vách ngăn 60kg, có thể chịu 20kg",
-      "categoryId": "12",
-      "price": "10000",
-      "discount": "10",
-      "currentPrice": "9000",
-      "sts": [
-        "hot",
-        "new",
-        "sell"
+      "name": "Giày Thể Thao Sneaker Nam",
+      "description": "<p>🐾 Size: 40 - 44</p><p>&nbsp;</p><p>⚡️ Tất cả sản phẩm của Shop đều cam kết Full Box, đóng gói cẩn thận nhằm mang lại cho khách hàng trải nghiệm mua sắm online an tâm nhất! (Ngoại trừ các đợt sale giá sỉ thì Shop không thể hỗ trợ thêm box đc)</p><p>&nbsp;</p><p>👌 Giày đẹp , nhẹ , bền. Có thể làm giày cặp, giày nhóm. Thích hợp đi chơi, chạy bộ , gym , đi học, đi làm...</p>",
+      "categoryId": "41351",
+      "price": "230000",
+      "discount": "15",
+      "delete": false,
+      "quantity": "90",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1453810805-170667a.webp?alt=media&token=9a80e172-96b4-4f12-8c18-59793b4a9bb5",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1436061606-170667a.webp?alt=media&token=a9cce99e-6eab-4529-bcea-054df65ba261",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1407560201-170667a.webp?alt=media&token=e0d8bb3d-62d2-4255-a7df-9d59bdb6fee0"
       ],
+      "sell": "0",
+      "revenue": "0",
+      "sts": [],
+      "currentPrice": 195500,
+      "id": 1,
+      "requestId": "BW1Wajfu10zRanZD8EuSk",
+      "signal": {}
+    },
+    {
+      "name": "Áo Thun Unisex",
+      "description": "<p>📍 THÔNG TIN SẢN PHẨM 📍</p><p>♦️ &nbsp;Tên sản phẩm: Áo Phông In Chữ LUCKY Local Brand Unisex</p><p>♦️ &nbsp;Màu sắc: Đen &amp; Xanh navy</p><p>♦️ &nbsp;Chất liệu: 100% Cotton lạnh (Premium cotton 100 % - 250gsm) với độ co giãn và thấm hút mồ hôi tốt, điều hòa nhiệt độ tốt, thích mặc mặc trong mua hè nắng nóng</p>",
+      "categoryId": "419857",
+      "price": "900000",
+      "discount": "20",
       "delete": false,
       "quantity": "34",
       "imgLink": [
-        "",
-        ""
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lw4i1zfpr109d3.jpg?alt=media&token=17566b3e-3236-4f5e-bc39-d9d2abe8a618"
       ],
+      "sell": "0",
       "revenue": "0",
-      "sell": "50"
+      "sts": [],
+      "currentPrice": 720000,
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Tủ giày dép",
-      "description": "Lắp ráp nhanh chóng và dễ dàng. Độ ổn định tốt, chứa được nhiều giày dép.",
-      "categoryId": "13",
-      "price": "12000",
+      "name": "Áo sơ mi dài tay basic",
+      "description": "<p>⭐ Tên sản phẩm : Áo sơ mi dài tay basic nam nữ unisex basic cao cấp</p><p>⭐ Chất Liệu: Đũi trơn Hàn cao cấp&nbsp;</p><p>⭐ Màu Sắc: Nâu đất Sleeve , Xanh Sleeve, Đen Sleeve, Nâu trầm Sleeve , Trắng Sleeve,</p><p>⭐ Đặc Tính: &nbsp;Chất vải áo là chất đũi trơn Hàn cao cấp dày dặn, dễ phối hợp đồ, nam nữ mặc đều đẹp ạ&nbsp;</p>",
+      "categoryId": "871053",
+      "price": "190000",
       "discount": "15",
-      "currentPrice": "10200",
-      "sts": [
-        "hot",
-        "new"
-      ],
       "delete": false,
-      "quantity": "20",
+      "quantity": "50",
       "imgLink": [
-        "",
-        ""
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fd4c862ef654db328bdc355b10330a4dc.jpg?alt=media&token=6a4c3530-9683-417e-8a8f-095bfbbd629d",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2F522a895c46014e5127ffbf1a341c1d75.jpg?alt=media&token=71175799-d507-46cc-9609-a7a3d2c4782e"
       ],
+      "sell": "0",
       "revenue": "0",
-      "sell": "30"
+      "sts": [],
+      "currentPrice": 161500,
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "Tủ lạnh mini",
-      "description": "Tiết kiệm điện năng, dung tích lớn, bảo quản thực phẩm tươi ngon.",
-      "categoryId": "14",
-      "price": "150000",
-      "discount": "20",
-      "currentPrice": "120000",
-      "sts": [
-        "new",
-        "sell"
-      ],
+      "name": "Giày Đá Bóng Adidas",
+      "description": "<p>➡️➡️➡️GIẦY ĐÁ BÓNG : Dùng cho dân PHỦI, loại 3 sọc CT3 có đế TF, đinh &nbsp;thấp , thích hợp đá bóng trên mặt sân cỏ nhân tạo. Nhưng cũng có thể đá trên</p><p>sân cỏ tự nhiên ko vấn đề, sản phẩm được giới đá bóng phủi săn lùng . Giá tiền lại rất hợp lý cho a e chuyên bóng đá phủi ! ----------------------------------------- ✍️Thông số kĩ thuật:</p><p>🌿 Size: 39-40-41-42-43.</p><p>🔰 Chất liệu da PU, chống thấm nước.</p><p>■ Đế giầy cao TF giúp tăng khả năng bám trụ.</p><p>✸ Họa tiết logo sắc nét.</p><p>🌟 Full khâu đế, chắc chắn, bền bỉ.</p><p>✔️ Chất liệu đế: đế nhựa wk.</p>",
+      "categoryId": "41351",
+      "price": "175000",
+      "discount": "",
       "delete": false,
-      "quantity": "15",
+      "quantity": "37",
       "imgLink": [
-        "",
-        ""
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fb40fae6f4547eac2dbd971b4024ac5c9.jpg?alt=media&token=25d987bf-5982-4a8f-94d0-0d0cbb3d8e18",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2F066e2d1fc2ad0e5531097966d4b17bfd.jpg?alt=media&token=ec6c0392-1a0e-4a6c-b2df-bd791dea0839",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fsg-11134201-22110-fx3yxkej6pjvbc.jpg?alt=media&token=d71c44b5-bc26-41d9-a7a2-cab8497f822b"
       ],
+      "sell": "0",
       "revenue": "0",
-      "sell": "25"
-    },
-    {
-      "id": 4,
-      "name": "Bàn học sinh",
-      "description": "Thiết kế tiện lợi, dễ dàng điều chỉnh chiều cao, bền đẹp.",
-      "categoryId": "15",
-      "price": "80000",
-      "discount": "5",
-      "currentPrice": "76000",
-      "sts": [
-        "hot",
-        "sell"
-      ],
-      "delete": false,
-      "quantity": "40",
-      "imgLink": [
-        "",
-        ""
-      ],
-      "revenue": "0",
-      "sell": "60",
-      "type": {
-        "color": [
-          "nâu",
-          "đen",
-          "trắng"
-        ]
-      }
-    },
-    {
-      "id": 5,
-      "name": "Kệ sách",
-      "description": "Thiết kế hiện đại, nhiều ngăn, lắp ráp dễ dàng, chứa được nhiều sách.",
-      "categoryId": "16",
-      "price": "50000",
-      "discount": "10",
-      "currentPrice": "45000",
-      "sts": [
-        "hot",
-        "new"
-      ],
-      "delete": false,
-      "quantity": "25",
-      "imgLink": [
-        "",
-        ""
-      ],
-      "revenue": "0",
-      "sell": "40"
+      "currentPrice": 175000,
+      "id": 4
     }
   ],
   "users": [
@@ -132,7 +93,7 @@
       "email": "huynguyen123@gmail.com",
       "password": "huynguyen123",
       "active": true,
-      "block": false,
+      "block": true,
       "img": ""
     },
     {
@@ -142,7 +103,7 @@
       "email": "maitran456@gmail.com",
       "password": "maitran456",
       "active": true,
-      "block": false,
+      "block": true,
       "img": ""
     },
     {
@@ -201,7 +162,7 @@
       "password": "123456789",
       "active": false,
       "roles": "user",
-      "block": false,
+      "block": true,
       "img": "",
       "id": 9
     },
@@ -214,121 +175,77 @@
       "block": false,
       "img": "",
       "id": 10
+    },
+    {
+      "nameAccount": "sxdfghscdvfbfdvbg",
+      "email": "asfd@gmail.com",
+      "password": "12345678",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 11
     }
   ],
   "categories": [
     {
-      "id": 373219,
+      "id": 748428,
       "name": "quần áo",
       "parentId": -1,
       "delete": true
     },
     {
-      "id": 609129,
-      "name": "sd",
+      "id": 537104,
+      "name": "thời trang nam",
+      "parentId": 748428,
+      "delete": true
+    },
+    {
+      "id": 652020,
+      "name": "quần đùi",
+      "parentId": 537104,
+      "delete": true
+    },
+    {
+      "id": 280119,
+      "name": "quan ao",
       "parentId": -1,
-      "delete": true
+      "delete": false
     },
     {
-      "id": 486535,
-      "name": "sãdcfv",
-      "parentId": 373219,
-      "delete": true
+      "id": 909530,
+      "name": "thoi trang nam",
+      "parentId": 280119,
+      "delete": false
     },
     {
-      "id": 34232,
-      "name": "yhyhy",
-      "parentId": 486535,
-      "delete": true
-    },
-    {
-      "id": 747939,
-      "name": "rftg",
-      "parentId": -1,
-      "delete": true
-    },
-    {
-      "id": 907716,
-      "name": "rfhyyh",
-      "parentId": 747939,
-      "delete": true
-    },
-    {
-      "id": 699328,
-      "name": "rfff",
-      "parentId": 907716,
-      "delete": true
-    },
-    {
-      "id": 760563,
-      "name": "tgrtghg",
-      "parentId": -1,
-      "delete": true
-    },
-    {
-      "id": 930670,
-      "name": "quần áo",
-      "parentId": -1,
-      "delete": true
-    },
-    {
-      "id": 171056,
-      "name": "ttrang nam",
-      "parentId": 843617,
-      "delete": true
-    },
-    {
-      "id": 598463,
-      "name": "trang nữ",
-      "parentId": 930670,
-      "delete": true
-    },
-    {
-      "id": 843617,
+      "id": 889981,
       "name": "the thao",
       "parentId": -1,
-      "delete": true
+      "delete": false
     },
     {
-      "id": 621577,
-      "name": "do da bong",
-      "parentId": 843617,
-      "delete": true
+      "id": 41351,
+      "name": "giày",
+      "parentId": 889981,
+      "delete": false
     },
     {
-      "id": 895968,
-      "name": "sdsf",
-      "parentId": 621577,
-      "delete": true
+      "id": 871053,
+      "name": "áo sơ mi",
+      "parentId": 909530,
+      "delete": false
     },
     {
-      "id": 182682,
-      "name": "sc",
-      "parentId": -1,
-      "delete": true
+      "id": 419857,
+      "name": "áo thun",
+      "parentId": 909530,
+      "delete": false
     },
     {
-      "id": 153196,
-      "name": "scv",
-      "parentId": -1,
-      "delete": true
-    },
-    {
-      "id": 832316,
-      "name": "sxc ",
-      "parentId": 153196,
-      "delete": true
-    },
-    {
-      "id": 952180,
-      "name": "xs",
-      "parentId": 832316,
-      "delete": true
-    },
-    {
-      "id": 329614,
-      "name": "f",
-      "parentId": -1,
+      "id": 455965,
+      "name": "thoi trang nu",
+      "parentId": 280119,
       "delete": false
     }
   ],

@@ -1,44 +1,58 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Container.scss'
 import { FilterOutlined,DownOutlined,StarFilled } from '@ant-design/icons'
+import { useState } from 'react';
+import Nav1 from './Navbar/Nav1';
+import Nav2 from './Navbar/Nav2';
+import { useLocation, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { getCategories, getFilterCategories } from '../../store/reducers/categoryReducer';
+import queryString from 'query-string'
+import { useDispatch } from 'react-redux';
 export default function Container() {
+    const location=useLocation();
+    const filterCategories=useSelector((state:any)=>state.categories.filterCategories);
+    const categoryList=useSelector((state:any)=>state.categories.categories);
+    const dispatch=useDispatch();
+    useEffect(()=>{
+        const filter1={
+            _limit:16,
+            _page:1,
+            parentId:location.state,
+        }
+        const paramString2=queryString.stringify(filter1);
+        dispatch(getCategories());
+        dispatch(getFilterCategories(paramString2));   
+    },[location])
+    const findChildCategory=(item:any,arr:any)=>{
+        let check:number=0
+        categoryList.forEach((e:any)=>{
+           if(e.parentId===item.id){
+            check=1;
+             return findChildCategory(e,arr);
+           }
+        })
+        if(check==0){
+            arr.push(item);
+        }
+        return arr;
+    }
+    useEffect(()=>{
+        let arr:any=[];
+        filterCategories.forEach((e:any)=>{
+            arr.push(findChildCategory(e,[]));
+        });
+        console.log(arr);  
+    },[filterCategories,categoryList])
   return (
     <div className='app_container'>
         <div className="grid">
         <div className='grid_row'>
             <div className='grid-column-2'>
-                <nav className='firstFilter_nav'>
-                    <h4>
-                        <FilterOutlined className='firstFilter-icon' />
-                        Bộ lọc tìm kiếm
-                    </h4> 
-                    <ul className='firstFilter-list'>
-                        <li className='firstFilter-item'>
-                            <input type="checkbox" className='checkCategory' />
-                            <span>Đồ trẻ em</span>
-                        </li>
-                        <li className='firstFilter-item'>
-                            <input type="checkbox" className='checkCategory' />
-                            <span>quần dài</span>
-                        </li>
-                    </ul> 
-                </nav>
+                <Nav1></Nav1>
             </div>
             <div className='grid-column-10'>
-                <div className='secondFilter_div'>
-                    <span className='title_filter'>Sắp xếp theo</span>
-                    <button className='btn'>Liên quan</button>
-                    <button className='btn'>Mới nhất</button>
-                    <button className='btn'>Bán chạy</button>
-                    <div className="select_price">
-                         <span className='select_title'>Gía</span>
-                         <DownOutlined className='selectPrice_icon' />
-                         <ul className='price_list'>
-                            <li className='price_list_item'>Gía:thấp đến cao</li>
-                            <li className='price_list_item'>Gía:cao đến thấp</li>
-                         </ul>
-                    </div>
-                </div>
+                <Nav2></Nav2>
                 <div className='home_products'>
                     <div className='grid_row'>
                         <div className='grid-column-2-4'>

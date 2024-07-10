@@ -5,10 +5,21 @@ const initialCategories: any[] = [];
 export const getCategories:any=createAsyncThunk(
     'Categories/getCategories',
     async ()=>{
-        const response = await axios.get(`http://localhost:3000/categories/`,{
-            params:{
-                delete:false
-            }
+        const response = await axios.get(`http://localhost:3000/categories/`, {
+            params: {
+                delete: false,
+            },
+        });
+        return response.data;
+    }
+)
+export const getFilterCategories:any=createAsyncThunk(
+    'Categories/getFilterCategories',
+    async (paramString:any)=>{
+        const response = await axios.get(`http://localhost:3000/categories/?${paramString}`, {
+            params: {
+                delete: false,
+            },
         });
         return response.data;
     }
@@ -50,6 +61,7 @@ const categoryReducer :any= createSlice({
     initialState: {
         categories:initialCategories,
         updatedItem:-1,
+        filterCategories:initialCategories,
     },
     reducers: {
         checkUpdated:(state:any,action:PayloadAction<any>)=>{
@@ -75,7 +87,10 @@ const categoryReducer :any= createSlice({
                     return e;
                 })
             })
+            .addCase(getFilterCategories.fulfilled,(state:any,action:PayloadAction<any>)=>{
+                state.filterCategories=action.payload;
+            })
     }
-});
+})
 export const {checkUpdated} = categoryReducer.actions;
 export default categoryReducer.reducer;

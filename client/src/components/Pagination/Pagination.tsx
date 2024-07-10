@@ -3,6 +3,8 @@ import { CaretLeftOutlined,CaretRightOutlined } from '@ant-design/icons'
 import './Pagination.scss'
 export default function Pagination(Props:any) {
     const {pagination,total}=Props;
+    console.log(pagination);
+    console.log(total);
     const renderBtn=()=>{
         const liItems: JSX.Element[] = [];
         for (let i = 0; i < Math.ceil(total/pagination._limit); i++) {
@@ -20,11 +22,9 @@ export default function Pagination(Props:any) {
         <div className='left_part_pagination' >Tổng số:<span className='total_number'>{total}</span> bản ghi</div>
         <div className='right_part_pagination'>
             <select name="" id=""className='paginationproduct_select' onChange={(e)=>{Props.handleLimitItems(e)}}  >
-                <option value="2">2 bản ghi/trang</option>
-                <option value="1">1 bản ghi/trang</option>
-                <option value="3">3 bản ghi/trang</option>
                 <option value="5">5 bản ghi/trang</option>
                 <option value="10">10 bản ghi/trang</option>
+                <option value="15">15 bản ghi/trang</option>
             </select>
             <ul className='pagination_btnlist'>
                 {!(pagination._page <= 1) && <li className='paginationproduct_btn ' onClick={()=>{Props.handlePrevPage()}} ><CaretLeftOutlined /></li>}

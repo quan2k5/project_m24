@@ -106,29 +106,6 @@ export default function Users() {
     }
   return (
     <div className='users_management_part'>
-        <div className='grid_row'>
-            <div className='grid-column-2'>
-                {/* <div className='admin_menu'>
-                    <ul>
-                        <li>
-                            <span>Tổng quan</span>
-                        </li>
-                        <li>
-                            <UserOutlined />
-                            <span>Quản lý người dùng</span>
-                        </li>
-                        <li>
-                            <UserOutlined />
-                            <span>Quản lý danh mục</span>
-                        </li>
-                        <li>
-                            <UserOutlined />
-                            <span>Quản lý sản phẩm</span>
-                        </li>
-                    </ul>
-                </div> */}
-            </div>
-            <div className='grid-column-10'>
                 <div className='header_totalUsers'>
                     <h3 className='title_totalUsers'>Danh sách Users</h3>
                     <button onClick={()=>{setModal(!modal)}} className='addEmployee_btn'>
@@ -187,8 +164,6 @@ export default function Users() {
                         handlePrevPage={handlePrevPage}
                     ></Pagination>
                 </div>
-            </div>
-        </div>
         {modal && <div className='manageUser_modal'>
             <form action="" className='addEmployee__form'>
                 <div className='closeEmployee_form' onClick={closeForm}>

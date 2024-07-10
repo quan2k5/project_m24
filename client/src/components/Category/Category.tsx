@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Category.scss'
-import { UseSelector,useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux';
-import { addCategory, deleteCategory, getCategories,checkUpdated} from '../../store/reducers/categoryReducer';
-import { RightOutlined } from '@ant-design/icons';
-import { ValidationCategory } from './Validation';
+import {useDispatch } from 'react-redux'
+import {deleteCategory, getCategories,checkUpdated} from '../../store/reducers/categoryReducer';
 import CategoryForm from './CategoryForm';
+import { useSelector } from 'react-redux';
 export default function Category() {
     const dispatch=useDispatch();
     const categoryList=useSelector((state:any)=>state.categories.categories);
@@ -42,9 +40,6 @@ export default function Category() {
     }
   return (
     <div className='category_admin'>
-        <div className='grid_row'>
-            <div className="grid-column-2"></div>
-            <div className='grid-column-10'>
                 <div className='category_admin_part'>
                     <CategoryForm></CategoryForm>
                     <div className='render_category_part'>
@@ -77,7 +72,5 @@ export default function Category() {
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
   )
 }
