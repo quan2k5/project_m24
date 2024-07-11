@@ -9,7 +9,6 @@
       "delete": false,
       "quantity": "90",
       "imgLink": [
-        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1453810805-170667a.webp?alt=media&token=9a80e172-96b4-4f12-8c18-59793b4a9bb5",
         "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1436061606-170667a.webp?alt=media&token=a9cce99e-6eab-4529-bcea-054df65ba261",
         "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1407560201-170667a.webp?alt=media&token=e0d8bb3d-62d2-4255-a7df-9d59bdb6fee0"
       ],
@@ -18,8 +17,7 @@
       "sts": [],
       "currentPrice": 195500,
       "id": 1,
-      "requestId": "BW1Wajfu10zRanZD8EuSk",
-      "signal": {}
+      "orders":true
     },
     {
       "name": "Áo Thun Unisex",
@@ -32,10 +30,11 @@
       "imgLink": [
         "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lw4i1zfpr109d3.jpg?alt=media&token=17566b3e-3236-4f5e-bc39-d9d2abe8a618"
       ],
-      "sell": "0",
+      "sell": "7",
+      "orders":true,
       "revenue": "0",
       "sts": [],
-      "currentPrice": 720000,
+        "currentPrice": 720000,
       "id": 2
     },
     {
@@ -54,6 +53,7 @@
       "revenue": "0",
       "sts": [],
       "currentPrice": 161500,
+      "orders":false,
       "id": 3
     },
     {
@@ -72,7 +72,76 @@
       "sell": "0",
       "revenue": "0",
       "currentPrice": 175000,
+      "orders":true,
       "id": 4
+    },
+    {
+      "name": "áo phông nam tay ngắn cổ tròn",
+      "description": "<p>✔️ ĐẶC TÍNH NỔI BẬT ÁO CỘC TAY NAM, ÁO PHÔNG NAM TAY NGẮN CỔ TRÒN UNISEX</p><p>- Áo thun nam dáng đứng, phong cách trẻ trung năng động và đầy cá tính&nbsp;</p><p>- Thiết kế fom áo thoải mái tự tin khi đi chơi hay mặc ở nhà , vận động ngoài trời&nbsp;</p><p>- Chất Thun cotton 4 chiều tạo cảm giác cực kỳ thoải mái khi mặc, đặc biệt không gây dị ứng cho da</p><p>- Co dãn mềm mại giặt tay hay giặt máy đều không hề bai dão hay phai màu</p>",
+      "categoryId": "419857",
+      "price": "69000",
+      "discount": "25",
+      "delete": false,
+      "quantity": "76",
+      "orders":true,
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2F4bb86577a89b67cbb45dbd6b9ae41a3f.jpg?alt=media&token=40a28a2b-1193-4f4e-97f1-cf99fba0e16b"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 51750,
+      "id": 5
+    },
+    {
+      "name": "Quần short nam Choice",
+      "description": "<p>✪ THÔNG TIN SẢN PHẨM&nbsp;</p><p>- Chất liệu: Vải xi rất nhanh khô, ít thấm nước, đặc biệt có trọng lượng khá nhẹ. Ngoài ra độ bền của vải siêu cao cấp, hấm hút mồ hôi t, không nóng bức khi vận động, không nhăn, không co rút sau khi giặt.</p><p>- Kích thước: M, L, XL, 2XL</p><p>- Màu sắc: Đen, Xanh than.</p><p>- Xuất xứ: Việt Nam</p>",
+      "categoryId": "115956",
+      "price": "45000",
+      "discount": "",
+      "delete": false,
+      "quantity": "35",
+      "orders":true,
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lwy57uuv2cbf22.jpg?alt=media&token=55cd4def-3863-4730-bc38-c28adec946ef"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 45000,
+      "id": 6
+    },
+    {
+      "name": "Quần đùi nam  phối kẻ sọc",
+      "description": "<p><br>\n✅ Kiểu dáng : QUẦN ĐÙI / SHORT NAM&nbsp;</p><p>\n\n✅ Chất liệu : vải GIÓ co dãn nhẹ phong cách trẻ trung, thoải mái vận động phù hợp nhiều độ tuổi.\n</p><p>\n✅ Màu sắc : ….\n</p><p>\n✅ SIZE : L + XL + XXL ……..\n</p><p>\n✅ Style: chơi thể thao, tập gym, dạo phố, mặc nhà ....</p>",
+      "categoryId": "115956",
+      "price": "135000",
+      "discount": "15",
+      "delete": false,
+      "quantity": "60",
+      "orders":true,
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lrs9x1mbq8jo8c.jpg?alt=media&token=9acbf000-8eb3-48d6-9c99-1200bf81247f"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 114750,
+      "id": 7
+    },
+    {
+      "name": "Áo sơ mi nam tay dài JBAGY Pastel ",
+      "description": "<p>🍁 Áo sơmi Unisex - thời trang trẻ hiện đại pha chút cổ điển. Mặc vào không bị lộ hàng nút ra ngoài.\n &nbsp; &nbsp;</p><p>&nbsp;Làm từ chất liệu lụa trơn mềm mịn thoáng mát. Sử dụng cho cả Nam và Nữ.\nXu hướng trẻ của năm 2022.\n</p><p>🍁 Hướng dẫn sử dụng size \n &nbsp; &nbsp; &nbsp;</p><p>&nbsp;Sơmi Form rộng phù hợp cho cả Nam và Nữ yêu thích dòng thời trang này.\n🥰 &nbsp;</p><p>Size M : &nbsp; &nbsp; 45kg đến 55kg, dưới 1m70\n &nbsp; &nbsp;&nbsp;</p><p>&nbsp;Size L: &nbsp; &nbsp; &nbsp; &nbsp;55kg đến 65kg, &nbsp;dưới &nbsp;1m75\n &nbsp; &nbsp; &nbsp;</p><p>Size XL: &nbsp; &nbsp; &nbsp;65kg đến 73kg, dưới &nbsp;1m80\n &nbsp; &nbsp;&nbsp;</p><p>&nbsp;Size 2XL : &nbsp; 73kg &nbsp;đến 90 kg : dưới 1m85</p>",
+      "categoryId": "871053",
+      "price": "90000",
+      "discount": "",
+      "delete": false,
+      "orders":false,
+      "quantity": "118",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lx8203ntcfkp75.jpg?alt=media&token=a1ff3c06-45f4-4116-b72a-c0f825ab6170"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 90000,
+      "id": 8
     }
   ],
   "users": [
@@ -246,6 +315,24 @@
       "id": 455965,
       "name": "thoi trang nu",
       "parentId": 280119,
+      "delete": false
+    },
+    {
+      "id": 203403,
+      "name": "áo phông nam",
+      "parentId": 909530,
+      "delete": true
+    },
+    {
+      "id": 622789,
+      "name": "quần bò ",
+      "parentId": 909530,
+      "delete": false
+    },
+    {
+      "id": 115956,
+      "name": "quần đui",
+      "parentId": 909530,
       "delete": false
     }
   ],

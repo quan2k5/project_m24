@@ -6,17 +6,22 @@ import { UseDispatch,useDispatch,useSelector } from 'react-redux'
 import { getProducts,deleteProduct,totalValidateProducts} from '../../../store/reducers/productReducer'
 import queryString from 'query-string'
 import { useNavigate } from 'react-router-dom'
+import { getCategories } from '../../../store/reducers/categoryReducer'
 let timeout:any=null;
 export default function TotalProduct() {
     const navigate=useNavigate();
     const dispatch=useDispatch();
     const productsList:any=useSelector((state:any)=>state.products.products);
     const totalProducts:any=useSelector((state:any)=>state.products.totalValidateProducts);
+    const categoryList:any=useSelector((state:any)=>state.categories.categories)
     const [filter,setFilter]=useState<any>({
         _limit:5,
         _page:1,
         name_like:'',
     });
+    useEffect(()=>{
+        dispatch(getCategories());
+    },[])
     useEffect(()=>{
         const {_limit,_page,...others}=filter;
         const paramString1=queryString.stringify(filter);
@@ -61,6 +66,15 @@ export default function TotalProduct() {
    const handleUpdateProduct=(item:any)=>{
         navigate(`/admin/product/update/${item.id}`,{ state:item});
    }
+   const findParentCategory=(categoryId:any)=>{   
+    let find=categoryList.find((e:any)=>{
+        return e.id===Number(categoryId)
+    })
+    if(find){
+        return find.name;
+    }
+    return ''
+   }
   return (
     <div className='totalProduct_admin_part'>
                 <div className='header_totalProducts'>
@@ -86,9 +100,9 @@ export default function TotalProduct() {
                             <tr className='title_table'>
                                 <th className='titleProducts_item'>Id</th>
                                 <th className='titleProducts_item'>Tên sản phẩm</th>
+                                <th className='titleProducts_item'>Danh mục</th>
                                 <th className='titleProducts_item'>Gía</th>
                                 <th className='titleProducts_item'>Số lượng</th>
-                                <th className='titleProducts_item'>Doanh thu</th>
                                 <th className='titleProducts_item'>Actions</th>
                             </tr>
                         </thead>
@@ -102,9 +116,9 @@ export default function TotalProduct() {
                                     </div>
                                     <span>{item.name}</span>
                                 </td>
-                                <td>{item.currentPrice}đ</td>
+                                <td>{findParentCategory(item.categoryId)}</td>
+                                <td>{item.currentPrice}</td>
                                 <td>{item.quantity}</td>
-                                <td>{item.revenue}đ</td>
                                 <td>
                                     <i className='bx bxs-edit-alt edit_productItem' onClick={()=>{handleUpdateProduct(item)}}></i>  
                                     <i  className='bx bx-trash delete_productItem' onClick={()=>{handleDeleteProduct(item)}}></i>                              

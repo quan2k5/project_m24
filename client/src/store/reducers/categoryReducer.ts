@@ -15,12 +15,18 @@ export const getCategories:any=createAsyncThunk(
 )
 export const getFilterCategories:any=createAsyncThunk(
     'Categories/getFilterCategories',
-    async (paramString:any)=>{
-        const response = await axios.get(`http://localhost:3000/categories/?${paramString}`, {
+    async (obj:any)=>{
+        const response = await axios.get(`http://localhost:3000/categories/?${obj.paramString}`, {
             params: {
                 delete: false,
             },
         });
+        if(response.data.length==0){
+            const response1=await axios.get(`http://localhost:3000/categories/${obj.id}`);
+            console.log('fgfg',response1);
+            
+            return [response1.data];
+        }
         return response.data;
     }
 )

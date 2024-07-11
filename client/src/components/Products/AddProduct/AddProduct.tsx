@@ -18,13 +18,33 @@ export default function AddProduct() {
     const [checkStatus,setCheckStatus]=useState<number>(0);
     const location=useLocation();
     const {action,productId}=useParams();
+    console.log(location.state);
+    
+    const inititalCategory=(category:any,arr:any)=>{
+       let parent=categoryList.find((e:any)=>{
+        return e.id===category.parentId;
+       })
+       if(parent){
+            arr.unshift(parent.id);
+            return  inititalCategory(parent,arr);
+       }
+       return arr;
+    }
     useEffect(()=>{
         if(action==='update'){
+            let findCategory=categoryList.find((e:any)=>{
+                return e.id===Number(location.state.categoryId);
+            })
+            if(findCategory){
+                let arr:any=inititalCategory(findCategory,[findCategory.id]);
+                console.log('dcvfc',arr);
+                setSelectedCategory(arr);
+            }
             setCheckStatus(1);
             dispatch(handleInitialProduct(location.state));
         }else{
             dispatch(handleInitialProduct({ name: '',description: '',categoryId: '-1',price: '',discount: '',delete: false,quantity: '',imgLink: [],sell: '0',revenue: '0',currentPrice:-1,}));
-        }
+      }
         dispatch(getCategories());   
         dispatch(getProducts());
     },[]);
@@ -37,20 +57,22 @@ export default function AddProduct() {
         })
     }
     const childCategory=(index:any,arr:any)=>{
+        console.log(13876543456,selectedCategory);
         let find=categoryList.find((e:any)=>{
             return Number(selectedCategory[index])===e.id;
         })
-        if(find){
+        if(find){  
             let filter=categoryList.filter((e:any)=>{
                 return find.id===e.parentId;
             })
             if(filter.length==0){
                 return arr;
             }
-            arr.push(filter);
+            arr.push(filter);  
             index++;
             return childCategory(index,arr);
         }
+        console.log('12wedffcvf',arr);   
         return arr;
     }
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -116,14 +138,14 @@ export default function AddProduct() {
                         <div className='product_item_flex'>
                             <div className='product_item'>
                                 <div className='product_label'><h4>Loại sản phẩm</h4></div>
-                                <select name='categoryId' className='product_input ' onChange={(e)=>{handleSelected(e,0)}}>
+                                <select  value={selectedCategory[0]==''?'-1':selectedCategory[0]} name='categoryId' className='product_input ' onChange={(e)=>{handleSelected(e,0)}}>
                                     <option value="-1">Mặc định</option>
                                     {filterParentCategory(categoryList).map((e:any)=>{
                                         return <option  value={e.id}>{e.name}</option>
                                     })}
                                 </select>
                                 {childCategory(0,[]).map((e:any,index:number)=>{
-                                    return <select name='categoryId' className='product_input selected_category_input' onChange={(e)=>{handleSelected(e,index+1)}}>
+                                    return <select  value={selectedCategory[index+1]==''?'-1':selectedCategory[index+1]} name='categoryId' className='product_input selected_category_input' onChange={(e)=>{handleSelected(e,index+1)}}>
                                         <option value="-1">Mặc định</option>
                                     {e.map((e:any)=>{
                                         return <option  value={e.id}>{e.name}</option>

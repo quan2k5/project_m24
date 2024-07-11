@@ -3,8 +3,6 @@ import { CaretLeftOutlined,CaretRightOutlined } from '@ant-design/icons'
 import './Pagination.scss'
 export default function Pagination(Props:any) {
     const {pagination,total}=Props;
-    console.log(pagination);
-    console.log(total);
     const renderBtn=()=>{
         const liItems: JSX.Element[] = [];
         for (let i = 0; i < Math.ceil(total/pagination._limit); i++) {

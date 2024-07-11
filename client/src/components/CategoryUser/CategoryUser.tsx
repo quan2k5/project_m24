@@ -7,7 +7,7 @@ export default function CategoryUser() {
   const selectCategory=()=>{
     console.log('run');
     const name='quan ao';
-    navigate(`/user/products/${name}`,{state:280119});
+    navigate(`/user/products/${name}/280119`);
   }
   return (
    <div className='top_UserCotainner'>
@@ -20,24 +20,19 @@ export default function CategoryUser() {
                     </h4> 
                     <ul className='category_user_list'>
                         <li onClick={selectCategory} className='categoryUser-item'>
-                          <img src="https://salt.tikicdn.com/cache/100x100/ts/category/f6/22/46/7e2185d2cf1bca72d5aeac385a865b2b.png.webp" alt="" />
                           <span>đồ điện tử</span>  
                         </li>
-                        <li className='categoryUser-item'>
-                          <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png.webp" alt="" />
-                          <span>máy tính điện thoại</span>  
+                        <li onClick={selectCategory} className='categoryUser-item'>
+                          <span>đồ điện tử</span>  
                         </li>
-                        <li className='categoryUser-item'>
-                          <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png.webp" alt="" />
-                          <span>máy tính điện thoại</span>  
+                        <li onClick={selectCategory} className='categoryUser-item'>
+                          <span>đồ điện tử</span>  
                         </li>
-                        <li className='categoryUser-item'>
-                          <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png.webp" alt="" />
-                          <span>máy tính điện thoại</span>  
+                        <li onClick={selectCategory} className='categoryUser-item'>
+                          <span>đồ điện tử</span>  
                         </li>
-                        <li className='categoryUser-item'>
-                          <img src="https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png.webp" alt="" />
-                          <span>máy tính điện thoại</span>  
+                        <li onClick={selectCategory} className='categoryUser-item'>
+                          <span>đồ điện tử</span>  
                         </li>
                     </ul> 
                 </nav>

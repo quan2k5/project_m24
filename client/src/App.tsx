@@ -13,6 +13,7 @@ import Register from './components/Register/Register.tsx'
 import Admin from './pages/admin/Admin.tsx'
 import CategoryUser from './components/CategoryUser/CategoryUser.tsx'
 import User from './pages/user/User.tsx'
+import DetailProduct from './components/DetailProduct/DetailProduct.tsx'
 export default function App() {
   console.log(111,import.meta.env.VITE_KEY_FIREBASE);
 
@@ -21,7 +22,8 @@ export default function App() {
       <Routes>
           <Route path='/user' element={<User></User>}>
               <Route  index element={<CategoryUser></CategoryUser>}></Route>
-              <Route path='products/:find?' element={<Container></Container>}></Route>
+              <Route path='products/:find?/:paramId?' element={<Container></Container>}></Route>
+              <Route path='detailProduct/:idProduct'  element={<DetailProduct></DetailProduct>}></Route>
           </Route>
           <Route path='/page' element={<RegisterLoginPage></RegisterLoginPage>}>
               <Route path='login' element={<Login></Login>} ></Route>

@@ -50,6 +50,13 @@ export const updateProduct:any=createAsyncThunk(
         return response.data;
     }
 )
+export const getProductById:any=createAsyncThunk(
+    'products/getProductById',
+    async (id:any)=>{ 
+        const response=await axios.get(`http://localhost:3000/products/${id}`); 
+        return response.data;
+    }
+)
 const productReducer :any= createSlice({
     name: 'products',
     initialState: {
@@ -100,6 +107,9 @@ const productReducer :any= createSlice({
             })
             .addCase(deleteProduct.fulfilled,(state,action:PayloadAction<any>)=>{
                 state.totalValidateProducts=action.payload;
+            })
+            .addCase(getProductById.fulfilled,(state,action:PayloadAction<any>)=>{
+                state.currentProduct=action.payload;
             })
     }
 });
