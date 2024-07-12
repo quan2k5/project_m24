@@ -42,8 +42,12 @@ const userReducer :any= createSlice({
         users:initialUsers,
         totalValidateUsers:0,
         allUsers:[],
+        userLogged:{},
     },
     reducers: {
+       handleLogged:(state:any,action:PayloadAction<any>)=>{
+            state.userLogged=action.payload;
+       }
     },
     extraReducers: (builder) => {
         builder
@@ -69,5 +73,5 @@ const userReducer :any= createSlice({
             })
     }
 });
-export const {addStart,addSuccess,addFail} = userReducer.actions;
+export const { handleLogged,addStart,addSuccess,addFail} = userReducer.actions;
 export default userReducer.reducer;

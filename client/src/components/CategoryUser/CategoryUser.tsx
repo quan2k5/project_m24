@@ -1,13 +1,16 @@
 import React from 'react'
 import './CategoryUser.scss'
 import { StarFilled } from '@ant-design/icons'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 export default function CategoryUser() {
   const navigate=useNavigate();
+  const searchParams=useSearchParams();
+  const searchParamsString = searchParams.toString();
+  
   const selectCategory=()=>{
     console.log('run');
     const name='quan ao';
-    navigate(`/user/products/${name}/280119`);
+    navigate(`/user/products/${name}/280119/page/1`);
   }
   return (
    <div className='top_UserCotainner'>

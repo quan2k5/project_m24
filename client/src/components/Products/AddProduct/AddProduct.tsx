@@ -43,7 +43,7 @@ export default function AddProduct() {
             setCheckStatus(1);
             dispatch(handleInitialProduct(location.state));
         }else{
-            dispatch(handleInitialProduct({ name: '',description: '',categoryId: '-1',price: '',discount: '',delete: false,quantity: '',imgLink: [],sell: '0',revenue: '0',currentPrice:-1,}));
+            dispatch(handleInitialProduct({ name: '',description: '',categoryId: '-1',price: '',discount: '',delete: false,quantity: '',imgLink: [],sell: '0',revenue: '0',currentPrice:-1,orders:false}));
       }
         dispatch(getCategories());   
         dispatch(getProducts());

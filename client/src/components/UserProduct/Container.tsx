@@ -9,7 +9,8 @@ import { useSelector } from 'react-redux';
 import { getCategories, getFilterCategories } from '../../store/reducers/categoryReducer';
 import queryString from 'query-string'
 import { useDispatch } from 'react-redux';
-import { getProducts } from '../../store/reducers/productReducer';
+import { getProducts,totalValidateProducts } from '../../store/reducers/productReducer';
+import PaginationUser from '../PaginationUser/PaginationUser';
 export default function Container() {
     const navigate=useNavigate();
     const location:any=useLocation();
@@ -18,24 +19,25 @@ export default function Container() {
     const productsList=useSelector((state:any)=>state.products.products);
     const [searchParams] = useSearchParams();
     const dispatch=useDispatch();
-    const{paramId}=useParams();
+    const{paramId,numberPage}=useParams();
     useEffect(()=>{
-        const filter1={
-            parentId:paramId,
-        }
-        const paramString2=queryString.stringify(filter1);
-        const obj={
-            id:paramId,
-            paramString:paramString2,
-        }
-        dispatch(getCategories());
-        dispatch(getFilterCategories(obj));   
+        if(searchParams.get('name')==null){
+            const filter1={
+                parentId:paramId,
+            }
+            const paramString2=queryString.stringify(filter1);
+            const obj={
+                id:paramId,
+                paramString:paramString2,
+            }
+            dispatch(getCategories());
+            dispatch(getFilterCategories(obj));
+        }   
     },[location])
     const findChildCategory=(item:any,arr:any)=>{
         let check:number=0
         categoryList.forEach((e:any)=>{
            if(e.parentId===item.id){
-            console.log('eeee');
             check=1;
              return findChildCategory(e,arr);
            }
@@ -46,19 +48,25 @@ export default function Container() {
         return arr;
     }
     useEffect(()=>{
-        let arr:any=[];
-        filterCategories.forEach((e:any)=>{
-            arr.push(findChildCategory(e,[]));
-        });
-        let newArr=arr.flat();
+        const filter2:any={
+            _page:numberPage,
+            _limit:5,
+        }
+        if(searchParams.get('name')==null){
+            let arr:any=[];
+            filterCategories.forEach((e:any)=>{
+                arr.push(findChildCategory(e,[]));
+            });
+            let newArr=arr.flat();
+            filter2['categoryId']=newArr;
+        }else{
+            filter2['name_like']=searchParams.get('name');
+        }
         const minprice=searchParams.get('minprice');
         const maxprice=searchParams.get('maxprice');
         const valueSort=searchParams.get('_sort');
         const statusSort=searchParams.get('_order');
         const saleFilter=searchParams.get('orders');
-        const filter2:any={
-            categoryId:newArr   
-        }
         if (minprice !== null && maxprice !== null) {
             filter2['currentPrice_gte']=minprice; 
             filter2['currentPrice_lte']=maxprice;
@@ -70,9 +78,12 @@ export default function Container() {
         if(saleFilter!==null){
             filter2['orders']=saleFilter;
         }
+        const {_page,_limit,...others}=filter2;
+        const paramString1=queryString.stringify(others);
+        dispatch(totalValidateProducts(paramString1));
         const paramString2=queryString.stringify(filter2);
         dispatch(getProducts(paramString2));
-    },[filterCategories,categoryList])
+    },[location,filterCategories])
     const GotoDetailProduct=(id:string)=>{
         navigate(`/user/detailProduct/${id}`);
     }
@@ -115,6 +126,7 @@ export default function Container() {
                         })}
                     </div>
                 </div>
+                <PaginationUser></PaginationUser>
             </div>
         </div>
         </div>

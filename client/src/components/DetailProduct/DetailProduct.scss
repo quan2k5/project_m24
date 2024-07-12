@@ -1,96 +1,192 @@
-.product-detail {
-    padding: 20px;
-    background-color: #f8f8f8;
-  }
-  
-  .product-detail .container-detail {
-    display: flex;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-detail .product-image img {
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-detail .product-image .list-img {
-    display: flex;
-  }
-  
-  .product-detail .product-image .list-img img {
-    width: 100px;
-  }
-  
-  .product-detail .product-info {
-    max-width: 600px;
-    padding: 20px;
-  }
-  
-  .product-detail .product-info h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .product-detail .product-info p {
-    font-size: 1.2em;
-    color: #000000;
-    margin-bottom: 15px;
-  }
-  
-  .product-detail .product-info #product-price {
-    font-size: 1.5em;
-    color: #e91e63;
-    margin-bottom: 20px;
-  }
-
-  .product-detail .product-info #product-description {
-    font-size: 26px;
-    color: rgb(255, 187, 0);
-  }
-  
-  .product-detail .product-info .button-list {
+.detail_product_part{
+    background-color: #F5F5F5;
+    min-height: 300px;
+    padding: 10px 0px;
     width: 100%;
-    margin-top: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-  }
-  
-  .product-detail .product-info .button-list .add-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: 600;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .product-detail .product-info .button-list .buy-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: 600;
-    color: #fff;
-    background-color: #e91e63;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .product-detail .product-info .button-list .add-button:hover {
-    background-color: #d81b60;
-  }
+    .detail_product_main{
+        background-color: white;
+        min-height: 200px;
+        padding: 10px;
+       .flex_box_product{
+        display: flex;
+        justify-content: space-between;
+        .left_part{
+            img{
+                width: 450px;
+                height: 450px;
+            }
+            .image_product_list{
+                padding-left: 0;
+                display: flex;
+                list-style: none;
+                .image_product_item{
+                    margin: 10px;
+                    img{
+                        width: 82px;
+                        height: 82px;
+                    }
+                }
+            }
+            .bottom_detail_product{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                .socialNetWork_list{
+                    list-style: none;
+                    display: flex;
+                    width: 50%;
+                    height: 40px;
+                    align-items: center;
+                    border-right: 1px solid rgba(0, 0, 0, .09);
+                    padding-left: 0;
+                    gap: 5px;
+                    font-size: large;
+                    i{
+                        font-size: larger;
+                    }
+                }
+                .favourite_part{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 40px;
+                    font-size: large;
+                    i{
+                        font-size: x-large;
+                        margin-right: 5px;
+                    }
+                    
+                }
+            }
+        }
+        .right_part{
+            margin-left: 60px;
+            width: 720px;
+            .name_detailProduct{
+                font-weight: 500;
+            }
+            .figure_actions_part{
+                display: flex;
+    
+                align-items: center;
+                .figure_action_item{
+                    border-right: 1px solid rgba(0, 0, 0, .09);
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    padding-right: 20px;
+                    .evaluated_number{
+                        text-decoration: underline;
+                        color: orangered;
+                        font-size: large;
+                        font-weight: 600;
+                        margin-right: 5px;
+                    }
+                    i{
+                        color: orangered;
+                    }
+                    .sell_number{
+                        font-size: larger;
+                        margin-right: 5px;
+                    }
+                    .sell_descripton{
+                        font-size: large;
+                        color: #767676;
+                    }
+                }
+            }
+            .detail_price_part{
+                background-color: #FAFAFA;
+                margin-top: 20px;
+                height: 100px;
+            }
+            .top_part{
+                background-image: url('https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/4323ad4dc2b3c72d0474.jpg');
+                width: 100%;
+                height: 36px;
+                padding: 6px 10px;
+            }
+            .bottom_part{
+                height: 60px;
+                padding: 0px 15px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                .actual_price{
+                    color:#929292;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+                .current_price{
+                    font-size: x-large;
+                    color: orangered;
+                }
+                .discount_product{
+                    position: absolute;
+                    background-color: orangered;
+                    padding: 0px 5px;
+                    color: white;
+                    font-weight: 600;
+                    top:20px;
+                    left: 190px;
+                }
+
+            }
+            .shipping_part{
+                margin-top: 10px;
+                padding: 10px;
+                display: flex;
+                .title{
+                    width: 100px;
+                    font-size: large;
+                }
+                .detail_shipping{
+                    .product_ship{
+                        display: flex;
+                        align-items: center;
+                        gap:5px;
+                        margin-bottom: 10px;
+                        img{
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                    }
+                }
+            }
+            .quantity_product_part{
+                margin-top: 10px;
+                padding: 10px;
+                display: flex;
+                .title{
+                    width: 100px;
+                    font-size: large;
+                }
+                .main{
+                    display: flex;
+                    align-items: center;
+                    gap:5px;
+                    .detail_quantity{
+                        display: flex;
+                        .btn{
+                            height: 32px;
+                            width: 32px;
+                            border: 1px solid rgba(0, 0, 0, .09);
+                            background-color: transparent;
+                        }
+                        input{
+                            width: 60px;
+                            border: 1px solid rgba(0, 0, 0, .09);
+                            height: 32px;
+                        }
+                    }
+                    .quantity_available{
+                        color: #757575;
+                    }
+
+                }
+            }
+        }
+       }
+    }
+}

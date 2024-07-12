@@ -14,6 +14,7 @@ import Admin from './pages/admin/Admin.tsx'
 import CategoryUser from './components/CategoryUser/CategoryUser.tsx'
 import User from './pages/user/User.tsx'
 import DetailProduct from './components/DetailProduct/DetailProduct.tsx'
+import Cart from './components/Cart/Cart.tsx'
 export default function App() {
   console.log(111,import.meta.env.VITE_KEY_FIREBASE);
 
@@ -22,15 +23,16 @@ export default function App() {
       <Routes>
           <Route path='/user' element={<User></User>}>
               <Route  index element={<CategoryUser></CategoryUser>}></Route>
-              <Route path='products/:find?/:paramId?' element={<Container></Container>}></Route>
+              <Route path='products/:find?/:paramId?/page/:numberPage?' element={<Container></Container>}></Route>
               <Route path='detailProduct/:idProduct'  element={<DetailProduct></DetailProduct>}></Route>
+              <Route path='cart' element={<Cart></Cart>}></Route>
           </Route>
           <Route path='/page' element={<RegisterLoginPage></RegisterLoginPage>}>
               <Route path='login' element={<Login></Login>} ></Route>
               <Route path='register' element={<Register></Register>}></Route>
           </Route>
           <Route path='/admin' element={<Admin></Admin>}>
-              <Route   element={<Users></Users>}></Route>
+              <Route index  element={<Users></Users>}></Route>
               <Route path='allProducts' element={<TotalProduct></TotalProduct>}></Route>
               <Route path='categories' element={<Category></Category>}></Route>
               <Route path='product/:action/:productId?' element={<AddProduct></AddProduct>}></Route>

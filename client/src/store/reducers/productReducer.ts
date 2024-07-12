@@ -10,7 +10,7 @@ export const addProduct:any=createAsyncThunk(
 )
 export const getProducts:any=createAsyncThunk(
     'products/getProducts',
-    async (paramString:any)=>{
+    async (paramString?:any)=>{
         const response = await axios.get(`http://localhost:3000/products/?${paramString}`, {
             params: {
                 delete: false,
@@ -74,6 +74,7 @@ const productReducer :any= createSlice({
             sell: '0',
             revenue: '0',
             currentPrice:-1,
+            orders:false,
         },
         errors:{
             name: '',
