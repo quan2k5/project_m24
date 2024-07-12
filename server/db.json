@@ -368,8 +368,6 @@
     {
       "id": 1,
       "idCustomer": 1,
-      "totalQuantity": 0,
-      "totalMoney": 0,
       "products": [
         {
           "id": 1,

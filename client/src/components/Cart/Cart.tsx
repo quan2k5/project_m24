@@ -41,8 +41,17 @@ export default function Cart() {
         }
     }
     useEffect(()=>{
-        
-    })
+        let arr:any=[];
+        myCart.products.forEach((e:any)=>{
+            arr.push(e.id); 
+        })
+        const filter1:any={
+            id:arr,
+        }  
+        const paramString1 = queryString.stringify(filter1);  
+        dispatch(getProducts(paramString1));   
+    },[myCart])
+    console.log('dè',productList);
     const handleSelected = (event: React.ChangeEvent<HTMLInputElement>, index: number,price:any) => {
         const checked = event.target.checked;
         const updatedCheckItem = [...checkItem];
@@ -55,9 +64,6 @@ export default function Cart() {
         setCheckItem(updatedCheckItem)
         const allChecked = updatedCheckItem.every(item => item === true);
         setAllCheck(allChecked);
-    };
-    const getProductForCart = (id: any) => {
-        return productList?.find((e: any) => e.id === id) || {};
     };
     return (
         <div className='cart_part'>
@@ -74,8 +80,7 @@ export default function Cart() {
                             </tr>
                         </thead>
                         <tbody>
-                            {myCart?.products && myCart.products.map((e: any, index: number) => {
-                                const product = getProductForCart(e.id);
+                            {productList.map((product: any, index: number) => {
                                 return (
                                     <tr className='cart_product_item' key={index}>
                                         <td className='cart_item_td'>
@@ -92,10 +97,10 @@ export default function Cart() {
                                         </td>
                                         <td className='cart_item_td'>
                                             <button className="btn">+</button>
-                                            <input type="number" defaultValue={e.quantity || 1} />
+                                            <input type="number" value={1} />
                                             <button className="btn">-</button>
                                         </td>
-                                        <td className='cart_item_td'>{e.quantity * (product.currentPrice || 0)}đ</td>
+                                        <td className='cart_item_td'>{(product.currentPrice || 0)}đ</td>
                                         <td className='cart_item_td'>
                                             <i className='bx bxs-trash'></i>
                                         </td>
