@@ -1,0 +1,36 @@
+.login_register_page{
+    .header_RegisterLoginPage{
+        height: 84px;
+        width: 100%;
+        .mainHeader{
+            display: flex;
+            align-items: center;
+            padding: 12px 0px;
+            .left_part_header{
+                display: flex;
+                align-items: center;
+                gap:20px;
+                
+                .header_logo{
+                    .logo_img{
+                        width: 150px;     
+                    }
+                }
+                h2{
+                    transform: translateY(10%);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .container_RegisterLoginPage{
+        height: 600px;
+        background-image: url('https://down-vn.img.susercontent.com/file/sg-11134004-7rd47-lwqocuzahgi2c3');
+        background-size: contain;
+        background-image: no-repeat;
+        background-position: center;
+        .main_page{
+            position: relative;
+        }
+    }
+}

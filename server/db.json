@@ -1,0 +1,385 @@
+{
+  "products": [
+    {
+      "name": "Giày Thể Thao Sneaker Nam",
+      "description": "<p>🐾 Size: 40 - 44</p><p>&nbsp;</p><p>⚡️ Tất cả sản phẩm của Shop đều cam kết Full Box, đóng gói cẩn thận nhằm mang lại cho khách hàng trải nghiệm mua sắm online an tâm nhất! (Ngoại trừ các đợt sale giá sỉ thì Shop không thể hỗ trợ thêm box đc)</p><p>&nbsp;</p><p>👌 Giày đẹp , nhẹ , bền. Có thể làm giày cặp, giày nhóm. Thích hợp đi chơi, chạy bộ , gym , đi học, đi làm...</p>",
+      "categoryId": "41351",
+      "price": "230000",
+      "discount": "15",
+      "delete": false,
+      "quantity": "90",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1436061606-170667a.webp?alt=media&token=a9cce99e-6eab-4529-bcea-054df65ba261",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fistockphoto-1407560201-170667a.webp?alt=media&token=e0d8bb3d-62d2-4255-a7df-9d59bdb6fee0"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "sts": [],
+      "currentPrice": 195500,
+      "id": 1,
+      "orders": true
+    },
+    {
+      "name": "Áo Thun Unisex",
+      "description": "<p>📍 THÔNG TIN SẢN PHẨM 📍</p><p>♦️ &nbsp;Tên sản phẩm: Áo Phông In Chữ LUCKY Local Brand Unisex</p><p>♦️ &nbsp;Màu sắc: Đen &amp; Xanh navy</p><p>♦️ &nbsp;Chất liệu: 100% Cotton lạnh (Premium cotton 100 % - 250gsm) với độ co giãn và thấm hút mồ hôi tốt, điều hòa nhiệt độ tốt, thích mặc mặc trong mua hè nắng nóng</p>",
+      "categoryId": "419857",
+      "price": "900000",
+      "discount": "20",
+      "delete": false,
+      "quantity": "34",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lw4i1zfpr109d3.jpg?alt=media&token=17566b3e-3236-4f5e-bc39-d9d2abe8a618"
+      ],
+      "sell": "7",
+      "orders": true,
+      "revenue": "0",
+      "sts": [],
+      "currentPrice": 720000,
+      "id": 2
+    },
+    {
+      "name": "Áo sơ mi dài tay basic",
+      "description": "<p>⭐ Tên sản phẩm : Áo sơ mi dài tay basic nam nữ unisex basic cao cấp</p><p>⭐ Chất Liệu: Đũi trơn Hàn cao cấp&nbsp;</p><p>⭐ Màu Sắc: Nâu đất Sleeve , Xanh Sleeve, Đen Sleeve, Nâu trầm Sleeve , Trắng Sleeve,</p><p>⭐ Đặc Tính: &nbsp;Chất vải áo là chất đũi trơn Hàn cao cấp dày dặn, dễ phối hợp đồ, nam nữ mặc đều đẹp ạ&nbsp;</p>",
+      "categoryId": "871053",
+      "price": "190000",
+      "discount": "15",
+      "delete": false,
+      "quantity": "50",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fd4c862ef654db328bdc355b10330a4dc.jpg?alt=media&token=6a4c3530-9683-417e-8a8f-095bfbbd629d",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2F522a895c46014e5127ffbf1a341c1d75.jpg?alt=media&token=71175799-d507-46cc-9609-a7a3d2c4782e"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "sts": [],
+      "currentPrice": 161500,
+      "orders": false,
+      "id": 3
+    },
+    {
+      "name": "Giày Đá Bóng Adidas",
+      "description": "<p>➡️➡️➡️GIẦY ĐÁ BÓNG : Dùng cho dân PHỦI, loại 3 sọc CT3 có đế TF, đinh &nbsp;thấp , thích hợp đá bóng trên mặt sân cỏ nhân tạo. Nhưng cũng có thể đá trên</p><p>sân cỏ tự nhiên ko vấn đề, sản phẩm được giới đá bóng phủi săn lùng . Giá tiền lại rất hợp lý cho a e chuyên bóng đá phủi ! ----------------------------------------- ✍️Thông số kĩ thuật:</p><p>🌿 Size: 39-40-41-42-43.</p><p>🔰 Chất liệu da PU, chống thấm nước.</p><p>■ Đế giầy cao TF giúp tăng khả năng bám trụ.</p><p>✸ Họa tiết logo sắc nét.</p><p>🌟 Full khâu đế, chắc chắn, bền bỉ.</p><p>✔️ Chất liệu đế: đế nhựa wk.</p>",
+      "categoryId": "41351",
+      "price": "175000",
+      "discount": "",
+      "delete": false,
+      "quantity": "37",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fb40fae6f4547eac2dbd971b4024ac5c9.jpg?alt=media&token=25d987bf-5982-4a8f-94d0-0d0cbb3d8e18",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2F066e2d1fc2ad0e5531097966d4b17bfd.jpg?alt=media&token=ec6c0392-1a0e-4a6c-b2df-bd791dea0839",
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fsg-11134201-22110-fx3yxkej6pjvbc.jpg?alt=media&token=d71c44b5-bc26-41d9-a7a2-cab8497f822b"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 175000,
+      "orders": true,
+      "id": 4
+    },
+    {
+      "name": "áo phông nam tay ngắn cổ tròn",
+      "description": "<p>✔️ ĐẶC TÍNH NỔI BẬT ÁO CỘC TAY NAM, ÁO PHÔNG NAM TAY NGẮN CỔ TRÒN UNISEX</p><p>- Áo thun nam dáng đứng, phong cách trẻ trung năng động và đầy cá tính&nbsp;</p><p>- Thiết kế fom áo thoải mái tự tin khi đi chơi hay mặc ở nhà , vận động ngoài trời&nbsp;</p><p>- Chất Thun cotton 4 chiều tạo cảm giác cực kỳ thoải mái khi mặc, đặc biệt không gây dị ứng cho da</p><p>- Co dãn mềm mại giặt tay hay giặt máy đều không hề bai dão hay phai màu</p>",
+      "categoryId": "419857",
+      "price": "69000",
+      "discount": "25",
+      "delete": false,
+      "quantity": "76",
+      "orders": true,
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2F4bb86577a89b67cbb45dbd6b9ae41a3f.jpg?alt=media&token=40a28a2b-1193-4f4e-97f1-cf99fba0e16b"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 51750,
+      "id": 5
+    },
+    {
+      "name": "Quần short nam Choice",
+      "description": "<p>✪ THÔNG TIN SẢN PHẨM&nbsp;</p><p>- Chất liệu: Vải xi rất nhanh khô, ít thấm nước, đặc biệt có trọng lượng khá nhẹ. Ngoài ra độ bền của vải siêu cao cấp, hấm hút mồ hôi t, không nóng bức khi vận động, không nhăn, không co rút sau khi giặt.</p><p>- Kích thước: M, L, XL, 2XL</p><p>- Màu sắc: Đen, Xanh than.</p><p>- Xuất xứ: Việt Nam</p>",
+      "categoryId": "115956",
+      "price": "45000",
+      "discount": "",
+      "delete": false,
+      "quantity": "35",
+      "orders": true,
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lwy57uuv2cbf22.jpg?alt=media&token=55cd4def-3863-4730-bc38-c28adec946ef"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 45000,
+      "id": 6
+    },
+    {
+      "name": "Quần đùi nam  phối kẻ sọc",
+      "description": "<p><br>\n✅ Kiểu dáng : QUẦN ĐÙI / SHORT NAM&nbsp;</p><p>\n\n✅ Chất liệu : vải GIÓ co dãn nhẹ phong cách trẻ trung, thoải mái vận động phù hợp nhiều độ tuổi.\n</p><p>\n✅ Màu sắc : ….\n</p><p>\n✅ SIZE : L + XL + XXL ……..\n</p><p>\n✅ Style: chơi thể thao, tập gym, dạo phố, mặc nhà ....</p>",
+      "categoryId": "115956",
+      "price": "135000",
+      "discount": "15",
+      "delete": false,
+      "quantity": "60",
+      "orders": true,
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lrs9x1mbq8jo8c.jpg?alt=media&token=9acbf000-8eb3-48d6-9c99-1200bf81247f"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 114750,
+      "id": 7
+    },
+    {
+      "name": "Áo sơ mi nam tay dài JBAGY Pastel ",
+      "description": "<p>🍁 Áo sơmi Unisex - thời trang trẻ hiện đại pha chút cổ điển. Mặc vào không bị lộ hàng nút ra ngoài.\n &nbsp; &nbsp;</p><p>&nbsp;Làm từ chất liệu lụa trơn mềm mịn thoáng mát. Sử dụng cho cả Nam và Nữ.\nXu hướng trẻ của năm 2022.\n</p><p>🍁 Hướng dẫn sử dụng size \n &nbsp; &nbsp; &nbsp;</p><p>&nbsp;Sơmi Form rộng phù hợp cho cả Nam và Nữ yêu thích dòng thời trang này.\n🥰 &nbsp;</p><p>Size M : &nbsp; &nbsp; 45kg đến 55kg, dưới 1m70\n &nbsp; &nbsp;&nbsp;</p><p>&nbsp;Size L: &nbsp; &nbsp; &nbsp; &nbsp;55kg đến 65kg, &nbsp;dưới &nbsp;1m75\n &nbsp; &nbsp; &nbsp;</p><p>Size XL: &nbsp; &nbsp; &nbsp;65kg đến 73kg, dưới &nbsp;1m80\n &nbsp; &nbsp;&nbsp;</p><p>&nbsp;Size 2XL : &nbsp; 73kg &nbsp;đến 90 kg : dưới 1m85</p>",
+      "categoryId": "871053",
+      "price": "90000",
+      "discount": "",
+      "delete": false,
+      "orders": false,
+      "quantity": "118",
+      "imgLink": [
+        "https://firebasestorage.googleapis.com/v0/b/projectm24-fd34e.appspot.com/o/images%2Fvn-11134207-7r98o-lx8203ntcfkp75.jpg?alt=media&token=a1ff3c06-45f4-4116-b72a-c0f825ab6170"
+      ],
+      "sell": "0",
+      "revenue": "0",
+      "currentPrice": 90000,
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nameAccount": "anhquanle618",
+      "roles": "user",
+      "email": "lanhquan130@gmail.com",
+      "password": "leanhquan2122005",
+      "active": true,
+      "block": false,
+      "img": ""
+    },
+    {
+      "id": 2,
+      "nameAccount": "huy nguyen",
+      "roles": "user",
+      "email": "huynguyen123@gmail.com",
+      "password": "huynguyen123",
+      "active": false,
+      "block": true,
+      "img": ""
+    },
+    {
+      "id": 3,
+      "nameAccount": "mai tran",
+      "roles": "user",
+      "email": "maitran456@gmail.com",
+      "password": "maitran456",
+      "active": false,
+      "block": true,
+      "img": ""
+    },
+    {
+      "id": 4,
+      "nameAccount": "anh hoang",
+      "roles": "user",
+      "email": "anhhoang789@gmail.com",
+      "password": "anhhoang789",
+      "active": false,
+      "block": false,
+      "img": ""
+    },
+    {
+      "id": 5,
+      "nameAccount": "minh pham",
+      "roles": "user",
+      "email": "minhpham101@gmail.com",
+      "password": "user",
+      "active": false,
+      "block": false,
+      "img": ""
+    },
+    {
+      "nameAccount": "duy đức",
+      "email": "duydyc@gmail.com",
+      "password": "12345678",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 6
+    },
+    {
+      "nameAccount": "congminh",
+      "email": "phamminh2008@gmail.com",
+      "password": "phaminh123",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 7
+    },
+    {
+      "nameAccount": "duy",
+      "email": "duy@gmail.com",
+      "password": "123456789",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 8
+    },
+    {
+      "nameAccount": "huy nguyễn",
+      "email": "duy1@gmail.com",
+      "password": "123456789",
+      "active": false,
+      "roles": "user",
+      "block": true,
+      "img": "",
+      "id": 9
+    },
+    {
+      "nameAccount": "minh manh",
+      "email": "minhmanh@gmail.com",
+      "password": "123456789",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 10
+    },
+    {
+      "nameAccount": "sxdfghscdvfbfdvbg",
+      "email": "asfd@gmail.com",
+      "password": "12345678",
+      "active": false,
+      "roles": "user",
+      "block": false,
+      "img": "",
+      "id": 11
+    }
+  ],
+  "categories": [
+    {
+      "id": 748428,
+      "name": "quần áo",
+      "parentId": -1,
+      "delete": true
+    },
+    {
+      "id": 537104,
+      "name": "thời trang nam",
+      "parentId": 748428,
+      "delete": true
+    },
+    {
+      "id": 652020,
+      "name": "quần đùi",
+      "parentId": 537104,
+      "delete": true
+    },
+    {
+      "id": 280119,
+      "name": "quan ao",
+      "parentId": -1,
+      "delete": false
+    },
+    {
+      "id": 909530,
+      "name": "thoi trang nam",
+      "parentId": 280119,
+      "delete": false
+    },
+    {
+      "id": 889981,
+      "name": "the thao",
+      "parentId": -1,
+      "delete": false
+    },
+    {
+      "id": 41351,
+      "name": "giày",
+      "parentId": 889981,
+      "delete": false
+    },
+    {
+      "id": 871053,
+      "name": "áo sơ mi",
+      "parentId": 909530,
+      "delete": false
+    },
+    {
+      "id": 419857,
+      "name": "áo thun",
+      "parentId": 909530,
+      "delete": false
+    },
+    {
+      "id": 455965,
+      "name": "thoi trang nu",
+      "parentId": 280119,
+      "delete": false
+    },
+    {
+      "id": 203403,
+      "name": "áo phông nam",
+      "parentId": 909530,
+      "delete": true
+    },
+    {
+      "id": 622789,
+      "name": "quần bò ",
+      "parentId": 909530,
+      "delete": false
+    },
+    {
+      "id": 115956,
+      "name": "quần đui",
+      "parentId": 909530,
+      "delete": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "level": 1,
+      "productId": 2,
+      "content": "",
+      "love": 13,
+      "response": [
+        12,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 4,
+      "customerId": 1,
+      "level": 3,
+      "productId": 2,
+      "content": "",
+      "love": 13,
+      "response": [
+        12,
+        5,
+        6
+      ]
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "idCustomer": 1,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 0,
+          "check": true
+        },
+        {
+          "id": 4,
+          "quantity": 0,
+          "check": false
+        }
+      ]
+    }
+  ]
+}

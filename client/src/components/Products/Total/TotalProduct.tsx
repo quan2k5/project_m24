@@ -5,16 +5,23 @@ import { PlusCircleOutlined ,SearchOutlined,CaretLeftOutlined,CaretRightOutlined
 import { UseDispatch,useDispatch,useSelector } from 'react-redux'
 import { getProducts,deleteProduct,totalValidateProducts} from '../../../store/reducers/productReducer'
 import queryString from 'query-string'
+import { useNavigate } from 'react-router-dom'
+import { getCategories } from '../../../store/reducers/categoryReducer'
 let timeout:any=null;
 export default function TotalProduct() {
+    const navigate=useNavigate();
     const dispatch=useDispatch();
     const productsList:any=useSelector((state:any)=>state.products.products);
     const totalProducts:any=useSelector((state:any)=>state.products.totalValidateProducts);
+    const categoryList:any=useSelector((state:any)=>state.categories.categories)
     const [filter,setFilter]=useState<any>({
-        _limit:2,
+        _limit:5,
         _page:1,
         name_like:'',
     });
+    useEffect(()=>{
+        dispatch(getCategories());
+    },[])
     useEffect(()=>{
         const {_limit,_page,...others}=filter;
         const paramString1=queryString.stringify(filter);
@@ -53,14 +60,26 @@ export default function TotalProduct() {
     const handleBtnPage=(numberPage:number)=>{
         setFilter({...filter,_page:numberPage})
     }
+    const addProduct=()=>{
+        navigate('/admin/product/add');
+   }
+   const handleUpdateProduct=(item:any)=>{
+        navigate(`/admin/product/update/${item.id}`,{ state:item});
+   }
+   const findParentCategory=(categoryId:any)=>{   
+    let find=categoryList.find((e:any)=>{
+        return e.id===Number(categoryId)
+    })
+    if(find){
+        return find.name;
+    }
+    return ''
+   }
   return (
     <div className='totalProduct_admin_part'>
-        <div className='grid_row'>
-            <div className='grid-column-2'></div>
-            <div className='grid-column-10'>
                 <div className='header_totalProducts'>
                     <h3 className='title_totalProducts'>Danh sách sản phẩm</h3>
-                    <button className='addProduct_btn'>
+                    <button className='addProduct_btn' onClick={addProduct}>
                         <PlusCircleOutlined className='plusCircle_icon' />
                         <span>Tạo sản phẩm</span>
                     </button>
@@ -81,9 +100,9 @@ export default function TotalProduct() {
                             <tr className='title_table'>
                                 <th className='titleProducts_item'>Id</th>
                                 <th className='titleProducts_item'>Tên sản phẩm</th>
+                                <th className='titleProducts_item'>Danh mục</th>
                                 <th className='titleProducts_item'>Gía</th>
                                 <th className='titleProducts_item'>Số lượng</th>
-                                <th className='titleProducts_item'>Doanh thu</th>
                                 <th className='titleProducts_item'>Actions</th>
                             </tr>
                         </thead>
@@ -93,15 +112,15 @@ export default function TotalProduct() {
                                 <td>{item.id}</td>
                                 <td className='nameProduct_item'>
                                     <div className='picture_productItem'>
-                                        <img src="https://media.istockphoto.com/id/1461285334/photo/empty-beige-wall-with-a-wooden-drawer-and-accessories.webp?b=1&s=170667a&w=0&k=20&c=QnQVHjYYeqCoRokhr87TwrdobZ-FLoQwazbbjSNxBnU=" alt="" />
+                                        <img src={item.imgLink[0]} alt="" />
                                     </div>
                                     <span>{item.name}</span>
                                 </td>
-                                <td>{item.currentPrice}đ</td>
+                                <td>{findParentCategory(item.categoryId)}</td>
+                                <td>{item.currentPrice}</td>
                                 <td>{item.quantity}</td>
-                                <td>{item.revenue}đ</td>
                                 <td>
-                                    <i className='bx bxs-edit-alt edit_productItem'></i>  
+                                    <i className='bx bxs-edit-alt edit_productItem' onClick={()=>{handleUpdateProduct(item)}}></i>  
                                     <i  className='bx bx-trash delete_productItem' onClick={()=>{handleDeleteProduct(item)}}></i>                              
                                 </td>
                             </tr>
@@ -110,7 +129,7 @@ export default function TotalProduct() {
                     </table>
                     <Pagination 
                         pagination={filter}
-                        totalProducts={totalProducts}
+                        total={totalProducts}
                         handleBtnPage={handleBtnPage}
                         handleNextPage={handleNextPage}
                         handleLimitItems={handleLimitItems}
@@ -118,7 +137,5 @@ export default function TotalProduct() {
                     ></Pagination>
                 </div>
             </div>
-        </div>    
-    </div>
   )
 }

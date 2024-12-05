@@ -1,6 +1,20 @@
 .products_adminActions_part{
-    background-color:#F5F5F5;
-    min-height: 1000px;
+    .footer_addProducts{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+        .submit_form{
+            background-color:#2962ff;
+            color: #F5F5F5;
+            outline: none;
+            border:none;
+            border-radius: 5px;
+            width:100px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+    }
     .allInforproduct_form{
         background-color: var(--white-color);
         min-height: 100px;
@@ -76,14 +90,28 @@
             margin-top: 10px;
             .image_item{
                 width:80px;
-                height: 80px;
+                height: 90px;
                 padding: 10px 15px;
                 border: 1px solid rgba(128, 128, 128, 0.473);
+                position: relative;
+                padding-bottom: 30px;
                 img{
                     width: 100%;
-                    height: 100%;
+                    height: 120%;
                     border-radius: 2px;
 
+                }
+                .delete_iamge_item{
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.342);
+                    bottom: 0;
+                    right:0;
+                    color: white;
+                    text-align: center;
+                    left:0;
+                    i{
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -220,4 +248,7 @@
             }
         }
     }
+}
+.selected_category_input{
+    margin-top: 20px;
 }

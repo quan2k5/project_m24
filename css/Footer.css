@@ -1,0 +1,33 @@
+.footer-part {
+  padding-top: 12px;
+  border-top: 4px solid orangered;
+}
+.footer-part .footer_heading {
+  font-size: small;
+  text-transform: uppercase;
+}
+.footer-part .footer_list {
+  padding-left: 0;
+  list-style: none;
+}
+.footer-part .footer_list_item {
+  color: #737373;
+  padding: 2px 0px;
+  cursor: pointer;
+}
+.footer-part .footer_list_item .app {
+  margin-left: 10px;
+}
+.footer-part .footer_list_item:hover {
+  color: orangered;
+}
+.footer-part .footer_dowload {
+  display: flex;
+}
+.footer-part .footer_dowload .footer_dowload_apps {
+  flex: 1;
+}
+.footer-part .footer_dowload .footer_dowload_apps .app_link {
+  margin-left: 5px;
+  margin-top: 10px;
+}/*# sourceMappingURL=Footer.css.map */

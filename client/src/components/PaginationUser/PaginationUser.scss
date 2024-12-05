@@ -1,0 +1,23 @@
+.pagination_user_part{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+        .pagination_btnlist{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            .userpaginationproduct_btn{
+                width:30px;
+                cursor: pointer;
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid rgba(128, 128, 128, 0.253);
+                text-align: center;
+                line-height: 30px;
+                margin-left: 5px;
+             }   
+        }
+
+}

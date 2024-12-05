@@ -26,6 +26,7 @@ export const addUsers:any=createAsyncThunk(
     'User/addUser',
     async(user:any)=>{
         const response=await axios.post('http://localhost:3000/users/',user);
+        return response.data;
     }
 )
 export const testBlock:any=createAsyncThunk(
@@ -41,8 +42,12 @@ const userReducer :any= createSlice({
         users:initialUsers,
         totalValidateUsers:0,
         allUsers:[],
+        userLogged:{},
     },
     reducers: {
+       handleLogged:(state:any,action:PayloadAction<any>)=>{
+            state.userLogged=action.payload;
+       }
     },
     extraReducers: (builder) => {
         builder
@@ -56,7 +61,6 @@ const userReducer :any= createSlice({
                 state.allUsers=action.payload;
             })
             .addCase(testBlock.fulfilled,(state:any,action:PayloadAction<any>)=>{
-                console.log('scdxc',action.payload);
                 state.users=state.users.map(function(e:any){
                     if(action.payload.id===e.id){
                        e.block=action.payload.block;
@@ -64,7 +68,10 @@ const userReducer :any= createSlice({
                     return e;
                 })
             })
+            .addCase(addUsers.fulfilled,(state:any,action:PayloadAction<any>)=>{
+                state.allUsers.push(action.payload);
+            })
     }
 });
-export const {addStart,addSuccess,addFail} = userReducer.actions;
+export const { handleLogged,addStart,addSuccess,addFail} = userReducer.actions;
 export default userReducer.reducer;
